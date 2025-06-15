@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Callback TikTok</title>
+</head>
+<body>
+  <h1>Autorização TikTok</h1>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code) {
+      document.body.innerHTML += `<p>Código de autorização: ${code}</p>`;
+      // Aqui você pode enviar o código para seu backend para trocar pelo token
+    } else {
+      document.body.innerHTML += '<p>Código não encontrado na URL.</p>';
+    }
+  </script>
+</body>
+</html>
